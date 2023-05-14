@@ -1,0 +1,14 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+h1 {
+    @include fonts($h1-mobile);
+
+    @include respond-to('large') {
+        @include fonts($h1-desktop);
+    }
+}
+
+p {
+    @include fonts($para);
+}

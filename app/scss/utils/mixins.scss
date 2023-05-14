@@ -1,3 +1,4 @@
+@use '../base/breakpoints.scss' as *;
 
 // Breakpoint mixin
 @mixin respond-to($name) {
@@ -11,3 +12,14 @@
         @warn "Invalid value, as it does not exist in `#{$breakpoints}`."
     }
 };
+
+// Font weight, Font size and Line height mixin
+@mixin fonts($props) {
+    $fw: if(map-has-key($props, font-weight ), map-get($props, font-weight), var(--bold));
+    $fs: map-get($props, font-size);
+    $lh: map-get($props, line-height);
+
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}

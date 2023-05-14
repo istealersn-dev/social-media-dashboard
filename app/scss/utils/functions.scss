@@ -2,5 +2,5 @@
 
 // function to convert px to rem
 @function px-to-rem($px, $base: 16) {
-    @return $px / $base * unit(1rem);
+    @return math.div($px, $base) * 1rem;
 }

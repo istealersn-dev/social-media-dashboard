@@ -1,3 +1,5 @@
+@use '../utils/' as *;
+
 /*
 Google Fonts is a library of 1513 open source font families and APIs for convenient use via CSS and Android. The library also has delightful and beautifully crafted icons for common actions and items. Download them for use in your digital products for Android, iOS, and web.
 */
@@ -5,12 +7,94 @@ Google Fonts is a library of 1513 open source font families and APIs for conveni
 
 :root {
     --font: 'Inter', sans-serif;
-    --fsize: px-to-rem(14);
+
+    //font size variations
+    --fsize: .875rem; // default 14-px
+    --lg-fsize: 3.5rem; // 56-px
+    --md-fsize: 2rem; // 32-px
+    --md-mfsize: 1.5rem; // 24-px h1 for mobile
+    --md-dfsize: 1.75rem; // 28-px h1 for desktop
+    
+    --xs-fsize: .75rem; // 12-px
+
+    // Line height variations
+    --lg-lheight: 3rem; // 48-px
+    --md-lheight: 2.4375rem; // 39-px
+    --md-dlheight: 2.125rem; // 34-px
+    --md-mlheight: 1.8125rem; // 29-px
+    --sm-lheight: 1.0625rem; // 17-px
+    --xs-lheight: .9375rem; // 15-px
+
+    // font weight variations
+    --bold: 700;
+    --regular: 400;
+
 }
 
-h1, h2, h3 {
-    margin-top: 0;
+/* Dashboard numbers varied size -------------------*/
 
+$lgNum: (
+    font-weight: var(--bold),
+    font-size: var(--lg-fsize),
+    line-height: var(--lg-lheight)
+);
+
+$mdNum: (
+    font-weight: var(--bold),
+    font-size: var(--md-fsize),
+    line-height: var(--md-lheight)
+);
+
+$smNum: (
+    font-weight: var(--bold),
+    font-size: var(--xs-fsize),
+    line-height: var(--sm-lheight)
+);
+
+/* Card metrics (followers, subscribers, etc.) and userNames */
+
+$lgCardMetric: (
+    font-weight: var(--regular),
+    font-size: var(--xs-fsize),
+    line-height: var(--sm-lheight)
+); // Large card
+
+$md-card-metric: (
+    font-weight: var(--bold),
+    font-size: var(--fsize), 
+    line-height: var(--sm-lheight)
+); // Medium Card
+
+$usrName: (
+    font-weight: var(--bold),
+    font-size: var(--xs-fsize),
+    line-height: var(--xs-lheight)
+); // User name on the platform
+
+/* h1 and paragraph styles for desktop and mobile -----------------*/
+
+$h1-desktop: (
+    font-size: var(--md-dfsize),
+    line-height: var(--md-dlheight)
+);
+
+$h1-mobile: (
+    font-weight: var(--bold),
+    font-size: var(--md-mfsize),
+    line-height: var(--md-mlheight)
+);
+
+$para: (
+    font-size: var(--fsize),
+    line-height: var(--sm-lheight)
+);
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 a, a:visited, a:active {
