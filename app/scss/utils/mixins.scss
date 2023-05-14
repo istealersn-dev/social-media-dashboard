@@ -1,0 +1,13 @@
+
+// Breakpoint mixin
+@mixin respond-to($name) {
+    @if map-has-key($breakpoints, $name ) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Invalid value, as it does not exist in `#{$breakpoints}`."
+    }
+};

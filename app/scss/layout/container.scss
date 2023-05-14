@@ -1,0 +1,6 @@
+@use '../utils/' as *;
+
+// Content width
+.container {
+    max-width: px-to-rem(1100);
+}
