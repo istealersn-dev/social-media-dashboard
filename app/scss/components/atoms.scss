@@ -1,14 +1,47 @@
-@use '../utils/' as *;
-@use '../base/' as *;
+@use "../utils/" as *;
+@use "../base/" as *;
 
-h1 {
-    @include fonts($h1-mobile);
+// Heading 1
+h1,
+h2 {
+  @include fonts($h-mobile);
 
-    @include respond-to('large') {
-        @include fonts($h1-desktop);
-    }
+  @include respond-to("large") {
+    @include fonts($h-desktop);
+  }
 }
 
+// Paragraph
 p {
-    @include fonts($para);
+  @include fonts($para);
+}
+
+// Large card borders
+.facebook {
+  border-top: var(--card-fb);
+}
+
+.twitter {
+  border-top: var(--card-tw);
+}
+
+.instagram {
+    border-top: var(--card-in);
+    border-image-source: linear-gradient(225deg, var(--instagram-top) 0%, var(--instagram-middle) 50.91%, var(--instagram-bottom) 100%);
+    border-image-slice: 100% 0 0 0;
+}
+
+.youtube {
+  border-top: var(--card-yt);
+}
+
+// trend colors
+.positive {
+  @include fonts($trend);
+  color: var(--limeGreen);
+}
+
+.negative {
+  @include fonts($trend);
+  color: var(--brightRed);
 }

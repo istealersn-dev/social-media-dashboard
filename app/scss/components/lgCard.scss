@@ -1,0 +1,50 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.card {
+    padding: 2rem 6.1875rem 1.5rem 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-blue-card-bg);
+    border-radius: .3125rem;
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+        padding-bottom: px-to-rem(28);
+
+        &--usrName {
+            @include fonts($usrName);
+            color: var(--light-card-text);
+        }
+    }
+
+    .card__num {
+        text-align: center;
+        padding-bottom: px-to-rem(25);
+
+        &--lg {
+            display: block;
+            @include fonts($lgNum);
+            color: var(--light-text);
+            padding-bottom: .5625rem;
+        }
+
+        &--metric {
+            @include fonts($lgCardMetric);
+            text-transform: uppercase;
+            color: var(--light-card-text);
+            letter-spacing: .3125rem;
+        }
+    }
+
+    &__trend {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .25rem;
+    }
+}

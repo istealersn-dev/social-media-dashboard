@@ -24,3 +24,9 @@ p {
 a, a:visited, a:active {
     text-decoration: none;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.875rem;
+}

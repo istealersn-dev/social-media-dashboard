@@ -1,0 +1,37 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.mdCard {
+    padding: 1.625rem 1.875rem 1.1875rem 1.5rem;
+    background-color: var(--light-blue-card-bg);
+    border-radius: .3125rem  ;
+
+    &__metrics {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1.4375rem;
+
+        &--md {
+            @include fonts($md-card-metric);
+        }
+    }
+
+    &__num {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        &--lg {
+            @include fonts($mdNum);
+        }
+
+        &--stats {
+            display: flex;
+            align-items: center;
+            gap: .1875rem;
+    }   
+    }   
+}

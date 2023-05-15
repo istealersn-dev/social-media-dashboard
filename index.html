@@ -5,34 +5,207 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- This is the master stylesheet   -->
   <link rel="stylesheet" href="dist/css/master.css">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-  <script src="dist/js/script.js"></script>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Social Media Dashboard</title>
+
 </head>
 <body>
-<header class="container">
-  <h1>Social Media Dashboard</h1>
-  <p> Total Followers: 23,004</p>
-  Dark Mode
-</header>
+  <!-- This is the header section -->
+  <header class="container">
+    <div class="header">
+      <h1>Social Media Dashboard</h1>
+      <p> Total Followers: 23,004</p>
+    </div>
+    <div class="toggle">
+      <label for="toggle__switch">Dark Mode</label>
+      <input type="checkbox" id="toggle__switch" class="toggle__input" aria-labelledby="toggle__switch">
+    </div>
+  </header>
   <main>
+    <!-- This the large cards section -->
+    <section>
+      <div class="lgCards container">
+        <div class="card facebook">
+          <div class="card__social">
+            <img src="images/icon-facebook.svg" alt="Facebook logo">
+            <span class="card__social--usrName">@nathanf</span>
+          </div>
+          <div class="card__num">
+            <span class="card__num--lg">1987</span>
+            <span class="card__num--metric">followers</span>
+          </div>
+          <div class="card__trend positive">
+            <img src="images/icon-up.svg" alt="upwards trend">
+            <span class="card__trend--stats">12 Today</span>
+          </div>
+        </div>
+        <div class="card twitter">
+          <div class="card__social">
+            <img src="images/icon-twitter.svg" alt="Twitter logo">
+            <span class="card__social--usrName">@nathanf</span>
+          </div>
+          <div class="card__num">
+            <span class="card__num--lg">1044</span>
+            <span class="card__num--metric">followers</span>
+          </div>
+          <div class="card__trend positive">
+            <img src="images/icon-up.svg" alt="upwards trend">
+            <span class="card__trend--stats">99 Today</span>
+          </div>
+        </div>
+        <div class="card instagram">
+          <div class="card__social">
+            <img src="images/icon-instagram.svg" alt="Instagram logo">
+            <span class="card__social--usrName">@realnathanf</span>
+          </div>
+          <div class="card__num">
+            <span class="card__num--lg">11k</span>
+            <span class="card__num--metric">followers</span>
+          </div>
+          <div class="card__trend positive">
+            <img src="images/icon-up.svg" alt="upwards trend">
+            <span class="card__trend--stats">1099 Today</span>
+          </div>
+        </div>
+        <div class="card youtube">
+          <div class="card__social">
+            <img src="images/icon-youtube.svg" alt="Youtube logo">
+            <span class="card__social--usrName">Nathan F.</span>
+          </div>
+          <div class="card__num">
+            <span class="card__num--lg">8239</span>
+            <span class="card__num--metric">subscribers</span>
+          </div>
+          <div class="card__trend negative">
+            <img src="images/icon-down.svg" alt="downwards trend">
+            <span class="card__trend--stats">144 Today</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- This is the medium cards section -->
+      <section>
+        <div class="mdCards container">
+          <h2>Overview Today</h2>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Page Views</span>
+              <img src="images/icon-facebook.svg" alt="Facebook logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">87</span>
+              <div class="mdCard__num--stats positive">
+                <img src="images/icon-up.svg" alt="upwards trend">
+                <span>3%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Likes</span>
+              <img src="images/icon-facebook.svg" alt="Facebook logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">52</span>
+              <div class="mdCard__num--stats negative">
+                <img src="images/icon-down.svg" alt="downwards trend">
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Likes</span>
+              <img src="images/icon-instagram.svg" alt="Instagram logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">52</span>
+              <div class="mdCard__num--stats positive">
+                <img src="images/icon-up.svg" alt="upwards trend">
+                <span>2257%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Profile Views</span>
+              <img src="images/icon-instagram.svg" alt="Instagram logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">52k</span>
+              <div class="mdCard__num--stats positive">
+                <img src="images/icon-up.svg" alt="upwards trend">
+                <span>1375%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Retweets</span>
+              <img src="images/icon-facebook.svg" alt="Facebook logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">117</span>
+              <div class="mdCard__num--stats positive">
+                <img src="images/icon-up.svg" alt="upwards trend">
+                <span>303%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Likes</span>
+              <img src="images/icon-twitter.svg" alt="Twitter logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">507</span>
+              <div class="mdCard__num--stats positive">
+                <img src="images/icon-up.svg" alt="upwards trend">
+                <span>553%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Likes</span>
+              <img src="images/icon-youtube.svg" alt="Youtube logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">107</span>
+              <div class="mdCard__num--stats negative">
+                <img src="images/icon-down.svg" alt="downwards trend">
+                <span>19%</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdCard">
+            <div class="mdCard__metrics">
+              <span class="mdCard__metrics--md">Total Views</span>
+              <img src="images/icon-youtube.svg" alt="Youtube logo">
+            </div>
+            <div class="mdCard__num">
+              <span class="mdCard__num--lg">1407</span>
+              <div class="mdCard__num--stats negative">
+                <img src="images/icon-down.svg" alt="downwards trend">
+                <span>12%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
 
-</main>
-  
-
-  
-  
-  <!-- <div class="attribution">
+  <!-- This is the footer section -->
+  <footer>
+<!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-  
+  </footer>
+  <script src="dist/js/script.js"></script>
 </body>
 </html>

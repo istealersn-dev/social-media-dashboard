@@ -52,33 +52,39 @@ $smNum: (
 );
 
 /* Card metrics (followers, subscribers, etc.) and userNames */
-
-$lgCardMetric: (
+// Large card
+$lgCardMetric: ( 
     font-weight: var(--regular),
     font-size: var(--xs-fsize),
     line-height: var(--sm-lheight)
-); // Large card
-
+); 
+// Medium Card
 $md-card-metric: (
     font-weight: var(--bold),
     font-size: var(--fsize), 
     line-height: var(--sm-lheight)
-); // Medium Card
-
+); 
+// User name on the platform
 $usrName: (
     font-weight: var(--bold),
     font-size: var(--xs-fsize),
     line-height: var(--xs-lheight)
-); // User name on the platform
+);
 
-/* h1 and paragraph styles for desktop and mobile -----------------*/
+$trend: (
+    font-size: var(--xs-fsize),
+    font-weight: var(--bold),
+    line-height: var(--xs-lheight)
+);
 
-$h1-desktop: (
+/* h1, h2 and paragraph styles for desktop and mobile -----------------*/
+
+$h-desktop: (
     font-size: var(--md-dfsize),
     line-height: var(--md-dlheight)
 );
 
-$h1-mobile: (
+$h-mobile: (
     font-weight: var(--bold),
     font-size: var(--md-mfsize),
     line-height: var(--md-mlheight)
