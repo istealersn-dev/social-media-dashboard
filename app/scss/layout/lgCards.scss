@@ -1,6 +1,14 @@
+@use '../utils/' as *;
+
 .lgCards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
     gap: 1.5rem;
-    padding-top: 2.5rem;
+
+    @include respond-to("large") {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.625rem;
+    }
 }
+

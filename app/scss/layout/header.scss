@@ -1,15 +1,29 @@
 @use '../utils/' as *;
 
 header {
-    position: relative;
+
+    width: 100%;
+
+    @include respond-to("large") {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .header {
         display: flex;
         flex-direction: column;
-        padding-top: px-to-rem(36);
-        padding-bottom: px-to-rem(24);
+        gap: .25rem;
+        padding-bottom: 1.5rem;
+        margin-top: px-to-rem(36);
         border-bottom: .0625rem solid hsl(229, 19%, 59%);
-        
+
+        @include respond-to("large") {
+            padding-bottom: 0;
+            gap: .1875rem;
+            border-bottom: none;
+        }
 
         & > h1 {
             color: var(--dark-blue-bg);
@@ -28,12 +42,21 @@ header {
         align-items: center;
         padding-top: 1rem;
 
+        @include respond-to("large") {
+            padding-top: 0;
+            margin-top: px-to-rem(36);
+        }
+
         // Label for toggle styling
         label {
             font-weight: 700;
             font-size: var(--fsize);
             line-height: var(--sm-lheight);
             color: var(--light-card-text);
+
+            @include respond-to("large") {
+                padding-right: .8125rem;
+            }
         }
 
         // Input[checkbox] for toggle styling
@@ -46,6 +69,7 @@ header {
             border-radius: 0.75rem;
             outline: none;
             cursor: pointer;
+            margin: 0;
         }
         
         .toggle__input::before {

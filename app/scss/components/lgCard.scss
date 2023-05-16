@@ -1,52 +1,66 @@
-@use '../utils/' as *;
-@use '../base/' as *;
+@use "../utils/" as *;
+@use "../base/" as *;
 
 .card {
-    padding: 2rem 6.1875rem 1.5rem 6.25rem;
+  padding: 2rem 6.1875rem 1.5rem 6.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-blue-card-bg);
+  position: relative;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+
+
+  @include respond-to("large") {
+    padding: 2rem 3.625rem 1.5rem 3.625rem;
+    max-height: 13.5rem;
+    max-width: 15.9375rem;
+  }
+
+  &__social {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: var(--light-blue-card-bg);
-    position: relative;
-    border-radius: .3125rem;
-    overflow: hidden;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: px-to-rem(28);
 
-    &__social {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: .5rem;
-        padding-bottom: px-to-rem(28);
+    &--usrName {
+      @include fonts($usrName);
+      color: var(--light-card-text);
+    }
+  }
 
-        &--usrName {
-            @include fonts($usrName);
-            color: var(--light-card-text);
-        }
+  .card__num {
+    text-align: center;
+    padding-bottom: px-to-rem(25);
+
+    &--lg {
+      display: block;
+      @include fonts($lgNum);
+      color: var(--light-text);
+      padding-bottom: 0.5625rem;
     }
 
-    .card__num {
-        text-align: center;
-        padding-bottom: px-to-rem(25);
-
-        &--lg {
-            display: block;
-            @include fonts($lgNum);
-            color: var(--light-text);
-            padding-bottom: .5625rem;
-        }
-
-        &--metric {
-            @include fonts($lgCardMetric);
-            text-transform: uppercase;
-            color: var(--light-card-text);
-            letter-spacing: .3125rem;
-        }
+    &--metric {
+      @include fonts($lgCardMetric);
+      text-transform: uppercase;
+      color: var(--light-card-text);
+      letter-spacing: 0.3125rem;
     }
+  }
 
-    &__trend {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: .25rem;
-    }
+  &__trend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+
+  }
+}
+
+.card:hover {
+  background-color: hsl(228, 33%, 91%);
+  cursor: pointer;
 }

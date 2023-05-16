@@ -2,6 +2,10 @@
 
 // Content width
 .container {
-    padding: 0 px-to-rem(24) 0 px-to-rem(25);
     max-width: px-to-rem(1100);
+
+    @include respond-to("large") {
+        padding: 0;
+        margin: 0 auto;
+    }
 }

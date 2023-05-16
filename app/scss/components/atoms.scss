@@ -11,6 +11,10 @@ h2 {
   }
 }
 
+h2 {
+  color: var(--light-card-text);
+}
+
 // Paragraph
 p {
   @include fonts($para);
@@ -28,7 +32,7 @@ p {
 .instagram::before {
    content: "";
    position: absolute;
-   height: .3125rem;
+   height: .25rem;
    width: 100%;
    inset: 0;
    background: var(--instagram);
@@ -47,4 +51,8 @@ p {
 .negative {
   @include fonts($trend);
   color: var(--brightRed);
+}
+
+.mdheader {
+  padding-bottom: 1.6875rem;
 }
