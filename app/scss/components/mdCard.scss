@@ -2,19 +2,30 @@
 @use '../base/' as *;
 
 .mdCard {
-    padding: 1.625rem 1.875rem 1.1875rem 1.5rem;
-    background-color: var(--light-blue-card-bg);
-    border-radius: .3125rem  ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4375rem;
+    padding: 0 1.875rem 0 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: .3125rem;
+
+    @include respond-to("large") {
+        padding-right: 1.9375rem;
+        max-width: 15.9375rem;
+        max-height: 7.8125rem;
+    }
 
     &__metrics {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 1.4375rem;
+        padding-top: 1.5rem;
+        color: var(--card-text-color);
 
         &--md {
             @include fonts($md-card-metric);
+            white-space: nowrap;
         }
     }
 
@@ -23,8 +34,10 @@
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
+        padding-bottom: 1.1875rem;
 
         &--lg {
+            color: var(--card-num-color);
             @include fonts($mdNum);
         }
 

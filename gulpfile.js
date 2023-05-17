@@ -49,8 +49,12 @@ function browserSyncReload(callback) {
 function watchHtml() {
     watch('*.html', browserSyncReload);
     watch(
-        ['app/scss/**/*.scss', 'app/js/*.js'],
+        ['app/scss/**/*.scss'],
         series(sassCompile, browserSyncReload)
+    );
+    watch(
+        ['app/js/*.js'],
+        series(jsCompile, browserSyncReload)
     );
 }
 
