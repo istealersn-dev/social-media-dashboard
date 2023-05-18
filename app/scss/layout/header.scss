@@ -70,4 +70,5 @@ header::before {
     height: 14.6875rem;
     background-color: var(--header-bg);
     border-radius: 0 0 px-to-rem(20) px-to-rem(20);
+    transition: background-color 0.5s ease-in;
 }
